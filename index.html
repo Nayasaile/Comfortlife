@@ -14,49 +14,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .hero,
-  .container,
-  section {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  h1 {
-    font-size: 48px !important;
-    line-height: 1 !important;
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
-
-  p {
-    max-width: 100%;
-  }
-
-  button,
-  .btn,
-  a.button {
-    width: 100%;
-    max-width: 100%;
-  }
-}    
 /* =====================================================================
    ============   PALETA DE COLORES DE LA MARCA   ======================
    Estos colores se tomaron directamente del LOGOTIPO de Comfort Life.
@@ -85,7 +42,7 @@ img {
 
 /* ============   RESET BÁSICO   ============ */
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
 body{
   font-family:'Jost',sans-serif;
   color:var(--texto);
@@ -461,10 +418,10 @@ footer{background:var(--azul-oscuro);color:rgba(247,244,236,.8);padding:3.5rem 0
 }
 @media(max-width:1400px){
   /* Menú colapsable en móvil y tablet */
-  nav{position:fixed;top:0;right:-100%;width:75%;max-width:320px;height:100vh;
+  nav{position:fixed;top:0;right:0;width:75%;max-width:320px;height:100vh;
       background:var(--crema);flex-direction:column;padding:5rem 2rem 2rem;
-      box-shadow:-10px 0 40px rgba(0,0,0,.15);transition:right .4s ease;z-index:1100;}
-  nav.open{right:0;}
+      box-shadow:-10px 0 40px rgba(0,0,0,.15);transform:translateX(100%);transition:transform .4s ease;z-index:1100;}
+  nav.open{transform:translateX(0);}
   nav ul{flex-direction:column;gap:1.5rem;align-items:flex-start;width:100%;}
   nav .btn-wa-header{margin-top:1rem;}
   .menu-toggle{display:flex;z-index:1200;}
@@ -530,6 +487,8 @@ header{background:rgba(255,255,255,.96);box-shadow:0 4px 22px rgba(16,38,59,.08)
   .hero-visual{max-width:560px;width:100%;}
 }
 @media(max-width:768px){
+    .hero-grid > *,
+    .container > *{min-width:0;}
   .nav-wrap{min-height:68px;}
   .logo img{height:50px;}
   .hero{min-height:0;padding:4.5rem 0 5rem;}
