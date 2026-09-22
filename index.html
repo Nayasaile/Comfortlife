@@ -155,9 +155,9 @@ nav a:hover::after{width:100%;}
 
 /* Imagen / tarjeta visual del hero */
 .hero-visual{position:relative;}
-.hero-photo-frame{position:relative;aspect-ratio:16/10;min-height:0;border-radius:24px;overflow:hidden;box-shadow:var(--sombra-media);background:var(--crema-osc);}
+.hero-photo-frame{position:relative;width:100%;min-width:0;aspect-ratio:16/10;min-height:0;border-radius:24px;overflow:hidden;box-shadow:var(--sombra-media);background:var(--crema-osc);}
 .hero-photo-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,35,60,0) 38%,rgba(20,35,60,.7) 100%);pointer-events:none;}
-.hero-photo{width:100%;height:100%;min-height:0;object-fit:cover;object-position:74% 22%;}
+.hero-photo{display:block;width:100%;max-width:100%;height:100%;min-width:0;min-height:0;object-fit:cover;object-position:74% 22%;}
 .hero-photo-caption{position:absolute;left:2rem;right:2rem;bottom:2rem;z-index:1;color:#fff;}
 .hero-photo-caption .caption-label{display:inline-block;margin-bottom:.6rem;color:var(--dorado-claro);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;}
 .hero-photo-caption h3{color:#fff;font-size:2rem;margin-bottom:.45rem;}
@@ -496,7 +496,13 @@ header{background:rgba(255,255,255,.96);box-shadow:0 4px 22px rgba(16,38,59,.08)
   .hero-visual{padding:.7rem;}
   .hero-visual::before{inset:1.5rem 0 0 1.5rem;}
   .hero-card{padding:2rem 1.6rem;}
-  .hero-photo-frame,.hero-photo{min-height:430px;}
+  .hero-photo-frame{aspect-ratio:4/3;min-height:0;}
+  .hero-photo{min-height:0;}
+  .hero-photo-trust{top:.75rem;right:.75rem;padding:.45rem .6rem;font-size:.68rem;}
+  .hero-photo-caption{left:1rem;right:1rem;bottom:1rem;}
+  .hero-photo-caption .caption-label{margin-bottom:.3rem;font-size:.6rem;}
+  .hero-photo-caption h3{font-size:1.35rem;line-height:1.05;margin-bottom:.25rem;}
+  .hero-photo-caption p{font-size:.8rem;line-height:1.35;}
   .servicios,.productos,.contacto,.nosotros{padding:5rem 0;}
   .wa-float{right:16px;bottom:16px;}
 }
