@@ -489,6 +489,7 @@ header{background:rgba(255,255,255,.96);box-shadow:0 4px 22px rgba(16,38,59,.08)
 @media(max-width:768px){
     .hero-grid > *,
     .container > *{min-width:0;}
+  body{padding-bottom:5rem;}
   .nav-wrap{min-height:68px;}
   .logo img{height:50px;}
   .hero{min-height:0;padding:4.5rem 0 5rem;}
@@ -504,7 +505,7 @@ header{background:rgba(255,255,255,.96);box-shadow:0 4px 22px rgba(16,38,59,.08)
   .hero-photo-caption h3{font-size:1.35rem;line-height:1.05;margin-bottom:.25rem;}
   .hero-photo-caption p{font-size:.8rem;line-height:1.35;}
   .servicios,.productos,.contacto,.nosotros{padding:5rem 0;}
-  .wa-float{right:16px;bottom:16px;}
+  .wa-float{right:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:52px;height:52px;padding:0;justify-content:center;}
 }
 </style>
 </head>
